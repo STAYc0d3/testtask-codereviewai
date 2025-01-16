@@ -16,7 +16,6 @@ class GitHubService:
             repo = self.github.get_repo(repo_name)
             return await self._get_all_contents(repo)
         except RateLimitExceededException:
-            # Чекаємо годину перед повторною спробою
             time.sleep(3600)
             return await self.get_repo_contents(repo_url)
 
