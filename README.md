@@ -15,6 +15,16 @@ AI-powered code review tool for analyzing GitHub repositories.
 4. Run Redis: `docker-compose up -d`
 5. Start the server: `poetry run uvicorn app.main:app --reload`
 
+## .env Example
+```
+GITHUB_TOKEN=
+OPENAI_API_KEY=
+
+REDIS_HOST=
+REDIS_PORT=
+REDIS_PASSWORD=
+```
+
 ## Usage
 Send POST request to `/api/v1/review` with:
 - assignment_description: string
